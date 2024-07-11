@@ -13,7 +13,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 		echo "Redhat Linux detected."
 		$MAKE_ME_ROOT yum update -y
 		$MAKE_ME_ROOT yum groupinstall -y "Development Tools"
-		$MAKE_ME_ROOT yum install -y cmake openssl-devel git protobuf protobuf-compiler clang clang-devel 
+		$MAKE_ME_ROOT yum install -y cmake openssl-devel git 
 	elif [ -f /etc/SuSE-release ]; then
 		echo "Suse Linux detected."
 		echo "This OS is not supported with this script at present. Sorry."
@@ -32,7 +32,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	elif [ -f /etc/debian_version ]; then
 		echo "Ubuntu/Debian Linux detected."
 		$MAKE_ME_ROOT apt update
-		$MAKE_ME_ROOT apt install -y cmake pkg-config libssl-dev git gcc build-essential git protobuf protobuf-compiler clang libclang-dev
+		$MAKE_ME_ROOT apt install -y cmake pkg-config libssl-dev git gcc build-essential git 
         $MAKE_ME_ROOT apt install curl jq  gcc unzip wget lz4 -y
 	else
 		echo "Unknown Linux distribution."
