@@ -132,7 +132,16 @@ $MAKE_ME_ROOT journalctl -u 0gd -f -o cat
 #faucet
 echo "0x$(0gchaind debug addr $(0gchaind keys show $WALLET_NAME -a) | grep hex | awk '{print $3}')" > ./faucet.txt
 
-read -p "Please faucet at https://faucet.0g.ai/  and press [Enter] key to continue..."
+#wait until input yes to continue
+while true; do
+	read -p "Have you got the faucet? (yes/no): " yn
+	case $yn in
+		[Yy]* ) break;;
+		[Nn]* ) echo "Please get the faucet from the faucet.txt file"; exit;;
+		* ) echo "Please answer yes or no.";;
+	esac
+done
+
 
 0gchaind status | jq .SyncInfo.catching_up
 
