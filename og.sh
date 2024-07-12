@@ -88,7 +88,7 @@ cd $HOME
 0gchaind init $MONIKER --chain-id $CHAIN_ID
 0gchaind config chain-id $CHAIN_ID
 0gchaind config node tcp://localhost:$RPC_PORT
-0gchaind config keyring-backend os
+0gchaind config keyring-backend test
 
 # download genesis.json
 wget https://github.com/0glabs/0g-chain/releases/download/v0.1.0/genesis.json -O $HOME/.0gchain/config/genesis.json
