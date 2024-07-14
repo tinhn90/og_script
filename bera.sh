@@ -73,7 +73,7 @@ source ~/.bash_profile && \
 go version
 
 curl -L https://foundry.paradigm.xyz | bash
-source /home/(whoami)/.bashrc
+source /home/whoami/.bashrc
 foundryup
 cd $HOME
 git clone https://github.com/berachain/polaris
