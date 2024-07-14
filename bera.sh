@@ -79,6 +79,4 @@ cd $HOME
 git clone https://github.com/berachain/polaris
 cd polaris
 git checkout main
-
-tmux new -s bera
 make start >> output.txt
