@@ -1,6 +1,6 @@
 #!/bin/bash
 # Copyright 2015-2020 Parity Technologies (UK) Ltd.
-
+whome="$(whoami)"
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	set -e
 	if [[ $(whoami) == "root" ]]; then
@@ -73,7 +73,7 @@ source ~/.bash_profile && \
 go version
 
 curl -L https://foundry.paradigm.xyz | bash
-source /home/whoami/.bashrc
+source /home/$USER/.bashrc
 foundryup
 cd $HOME
 git clone https://github.com/berachain/polaris
